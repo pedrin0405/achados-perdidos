@@ -22,4 +22,4 @@ USER appuser
 EXPOSE 5000
 
 # Forma exec (colchetes), escutando em 0.0.0.0:5000
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "--threads", "4", "--worker-class", "gthread", "--timeout", "60", "--graceful-timeout", "30", "--access-logfile", "-", "app:app"]

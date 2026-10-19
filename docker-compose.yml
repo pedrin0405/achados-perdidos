@@ -28,6 +28,13 @@ services:
       UPLOAD_DIR: /app/uploads
     ports:
       - "8080:5000"
+    healthcheck:
+      # python:3.12-slim nao tem curl: usamos urllib do proprio python
+      test: ['CMD', 'python', '-c', 'import urllib.request; urllib.request.urlopen("http://127.0.0.1:5000/health", timeout=5)']
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     volumes:
       - fotos:/app/uploads
     depends_on:
