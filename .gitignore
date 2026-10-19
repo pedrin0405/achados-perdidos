@@ -24,6 +24,7 @@ Thumbs.db
 # Logs e arquivos temporários de execução local.
 *.log
 trash/
+image.png
 
 # Backups locais de volume (contêm fotos reais; ver README, seção 13.2).
 backup-fotos/
