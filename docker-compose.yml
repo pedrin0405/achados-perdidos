@@ -44,6 +44,17 @@ services:
       - rede_interna
     restart: unless-stopped
 
+  adminer:
+    image: adminer:latest
+    container_name: achados-adminer
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    networks:
+      - rede_interna
+    depends_on:
+      - db
+      
 volumes:
   dados_banco:
   fotos:
