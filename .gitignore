@@ -29,3 +29,4 @@ image.png
 # Backups locais de volume (contêm fotos reais; ver README, seção 13.2).
 backup-fotos/
 *.tar.gz
+backups/
