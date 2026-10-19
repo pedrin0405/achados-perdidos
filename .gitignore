@@ -1,0 +1,30 @@
+# Segredos e configuração local: nunca versionados.
+.env
+.env.local
+.env.*.local
+
+# Bytecode e caches do Python.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Ambientes virtuais (dependências são instaladas na imagem Docker).
+.venv/
+venv/
+env/
+
+# Artefatos locais de editor/SO.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs e arquivos temporários de execução local.
+*.log
+trash/
+
+# Backups locais de volume (contêm fotos reais; ver README, seção 13.2).
+backup-fotos/
+*.tar.gz
